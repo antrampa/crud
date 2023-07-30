@@ -9,6 +9,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { EmpAddEditComponent } from './components/emp-add-edit/emp-add-edit.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [AppComponent, EmpAddEditComponent],
@@ -20,6 +26,12 @@ import { EmpAddEditComponent } from './components/emp-add-edit/emp-add-edit.comp
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpAddEditComponent implements OnInit {
 
+  educations: string[] = [
+    'Matric',
+    'Diploma',
+    'Intermediate',
+    'Graduate',
+    'Post Graduate'
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
