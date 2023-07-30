@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-emp-add-edit',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./emp-add-edit.component.scss']
 })
 export class EmpAddEditComponent implements OnInit {
+
+  empForm: FormGroup;
 
   educations: string[] = [
     'Matric',
@@ -15,9 +18,27 @@ export class EmpAddEditComponent implements OnInit {
     'Post Graduate'
   ];
 
-  constructor() { }
+  constructor(private _fb: FormBuilder) { 
+    this.empForm = this._fb.group({
+      firstName: '',
+      lastName: '',
+      email: '',
+      bob: '',
+      gender: '',
+      education: '',
+      company: '',
+      experiance: '',
+      package: ''
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+  onFormSubmit() {
+    if(this.empForm.valid) {
+      console.log(this.empForm.value);
+    }
   }
 
 }
