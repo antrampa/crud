@@ -13,4 +13,8 @@ export class EmployeeService {
   addEmployee(data: any): Observable<any> {
     return this._http.post(this.MAIN_URL + '/employees', data);
   }
+
+  getEmplyeeList(): Observable<any> {
+    return this._http.get(this.MAIN_URL + '/employees');
+  }
 }
