@@ -11,11 +11,15 @@ export class EmployeeService {
   constructor(private _http: HttpClient) { }
 
   addEmployee(data: any): Observable<any> {
-    return this._http.post(this.MAIN_URL + '/employees', data);
+    return this._http.post(`${this.MAIN_URL}/employees`, data);
+  }
+  
+  updateEmployee(id: number, data: any): Observable<any> {
+    return this._http.put(`${this.MAIN_URL}/employees/${id}`, data);
   }
 
   getEmplyeeList(): Observable<any> {
-    return this._http.get(this.MAIN_URL + '/employees');
+    return this._http.get(`${this.MAIN_URL}/employees`);
   }
 
   deleteEmployee(id: number): Observable<any> {

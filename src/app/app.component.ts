@@ -82,4 +82,10 @@ export class AppComponent implements OnInit {
       error: console.log
     });
   }
+
+  openEditEmployee(data: any) {
+    this._dialog.open(EmpAddEditComponent, {
+      data,
+    });
+  }
 }
