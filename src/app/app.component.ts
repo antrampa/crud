@@ -18,11 +18,11 @@ export class AppComponent implements OnInit {
     'id', 
     'firstName', 
     'lastName', 
-    'gender',  
-    'bob', 
     'email', 
-    'company',
-    'education', 
+    'bob',  
+    'gender', 
+    'education',
+    'company', 
     'experiance', 
     'package' 
    ];
