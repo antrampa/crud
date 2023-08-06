@@ -17,4 +17,8 @@ export class EmployeeService {
   getEmplyeeList(): Observable<any> {
     return this._http.get(this.MAIN_URL + '/employees');
   }
+
+  deleteEmployee(id: number): Observable<any> {
+    return this._http.delete(`${this.MAIN_URL}/employees/${id}`);
+  }
 }
